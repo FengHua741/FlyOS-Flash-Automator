@@ -182,7 +182,7 @@ if ping -c 1 -W 2 192.168.101.239 &> /dev/null; then
 编辑 `fly-flash-automator.service`：
 ```ini
 # 修改延迟时间（秒）
-ExecStartPre=/bin/sleep 10
+ExecStartPre=/bin/sleep 2
 ```
 
 ## 🗑️ 卸载系统
