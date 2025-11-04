@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # FlyOS Flash Automator with Network Check
-LOG_FILE="/data/flyos-flash-automator/flash.log"
-DEBUG_LOG="/data/flyos-flash-automator/debug.log"
+LOG_FILE="/data/FlyOS-Flash-Automator/flash.log"
+DEBUG_LOG="/data/FlyOS-Flash-Automator/debug.log"
 
 # 初始化日志数组
 LOG_LINES=()

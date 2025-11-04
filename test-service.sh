@@ -9,12 +9,12 @@ systemctl status fly-flash-automator.service --no-pager
 
 echo ""
 echo "2. 检查脚本权限..."
-ls -la /data/flyos-flash-automator/flash-with-network.sh
+ls -la /data/FlyOS-Flash-Automator/flash-with-network.sh
 
 echo ""
 echo "3. 手动测试网络检查..."
-/data/flyos-flash-automator/flash-with-network.sh
+/data/FlyOS-Flash-Automator/flash-with-network.sh
 
 echo ""
 echo "4. 查看测试日志..."
-tail -f /data/flyos-flash-automator/flash.log
+tail -f /data/FlyOS-Flash-Automator/flash.log
