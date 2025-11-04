@@ -13,9 +13,11 @@
 
 ```bash
 # 克隆仓库
-cd /data && git clone https://github.com/your-username/FlyOS-Flash-Automator.git
-cd /dataFlyOS-Flash-Automator
-
+cd /data && git clone https://github.com/FengHua741/FlyOS-Flash-Automator.git
+cd /data/FlyOS-Flash-Automator
+```
 # 安装（需要 root 权限）
+```bash
 chmod +x install.sh
 sudo ./install.sh
+```
