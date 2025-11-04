@@ -1,0 +1,14 @@
+[Unit]
+Description=FlyOS Flash Automator - Automatic firmware flashing service
+After=multi-user.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "fly-flash -d auto -u -f /usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin && fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin && lsusb && poweroff"
+TimeoutStartSec=300
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target
