@@ -4,11 +4,14 @@ After=multi-user.target
 Wants=network-online.target
 
 [Service]
-Type=simple
-ExecStart=/bin/bash -c "fly-flash -d auto -u -f /usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin && fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin && lsusb && poweroff"
-TimeoutStartSec=300
-Restart=no
+Type=oneshot
+ExecStartPre=/bin/sleep 10
+ExecStart=/bin/bash -c "echo '开始执行烧录流程...' && fly-flash -d auto -u -f /usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin && fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin && lsusb && echo '烧录完成，即将关机...' && poweroff"
+TimeoutStartSec=600
+RemainAfterExit=no
 User=root
+StandardOutput=journal+console
+StandardError=journal+console
 
 [Install]
 WantedBy=multi-user.target
