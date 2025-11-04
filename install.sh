@@ -13,7 +13,7 @@ fi
 
 # 创建数据目录
 echo "创建数据目录..."
-mkdir -p /data/flyos-flash-automator
+mkdir -p /data/FlyOS-Flash-Automator
 
 # 检查必要的命令是否存在
 echo "检查系统依赖..."

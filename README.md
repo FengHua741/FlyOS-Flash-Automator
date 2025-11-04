@@ -37,7 +37,7 @@ chmod +x install.sh
 
 **服务文件位置**: `/etc/systemd/system/fly-flash-automator.service`
 
-**执行的命令**: 通过 `/data/flyos-flash-automator/flash-with-network.sh` 执行完整烧录流程
+**执行的命令**: 通过 `/data/FlyOS-Flash-Automator/flash-with-network.sh` 执行完整烧录流程
 
 **烧录流程**:
 ```bash
@@ -57,7 +57,7 @@ systemctl status fly-flash-automator.service
 journalctl -u fly-flash-automator.service -f
 
 # 查看文件日志
-tail -f /data/flyos-flash-automator/flash.log
+tail -f /data/FlyOS-Flash-Automator/flash.log
 
 # 手动启动服务
 systemctl start fly-flash-automator.service
@@ -83,8 +83,8 @@ systemctl enable fly-flash-automator.service
 
 ### `flash-with-network.sh`
 - 主烧录脚本，包含网络检查和状态上报
-- 位置: `/data/flyos-flash-automator/flash-with-network.sh`
-- 日志: `/data/flyos-flash-automator/flash.log`
+- 位置: `/data/FlyOS-Flash-Automator/flash-with-network.sh`
+- 日志: `/data/FlyOS-Flash-Automator/flash.log`
 
 ### `install.sh`
 - 一键安装脚本，检查依赖并配置服务
@@ -116,7 +116,7 @@ journalctl -u fly-flash-automator.service -f
 
 ### 方式3: 文件日志
 ```bash
-tail -f /data/flyos-flash-automator/flash.log
+tail -f /data/FlyOS-Flash-Automator/flash.log
 ```
 
 ## 🔄 状态上报
@@ -198,7 +198,7 @@ ExecStartPre=/bin/sleep 2
 
 如需完全清理：
 ```bash
-rm -rf /data/flyos-flash-automator/
+rm -rf /data/FlyOS-Flash-Automator/
 ```
 
 ## 📄 许可证
@@ -208,7 +208,7 @@ MIT License
 ## 🤝 技术支持
 
 如果遇到问题：
-1. 查看日志文件：`/data/flyos-flash-automator/flash.log`
+1. 查看日志文件：`/data/FlyOS-Flash-Automator/flash.log`
 2. 检查服务状态：`systemctl status fly-flash-automator.service`
 3. 运行测试脚本：`./test-service.sh`
 4. 重新安装系统：先运行 `./uninstall.sh` 再运行 `./install.sh`
