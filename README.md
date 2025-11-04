@@ -19,5 +19,5 @@ cd /data/FlyOS-Flash-Automator
 # 安装（需要 root 权限）
 ```bash
 chmod +x install.sh
-sudo ./install.sh
+./install.sh
 ```
