@@ -27,6 +27,7 @@ FlyOS-Flash-Automator/
 ## 🚀 快速安装
 
 ```bash
+rm -rf /data/FlyOS-Flash-Automator
 cd /data && git clone https://github.com/FengHua741/FlyOS-Flash-Automator.git
 cd /data/FlyOS-Flash-Automator
 chmod +x install.sh
