@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStartPre=/bin/sleep 10
+ExecStartPre=/bin/sleep 1
 ExecStart=/bin/bash -c "/opt/flyos-flash-automator/run-with-logging.sh"
 TimeoutStartSec=600
 RemainAfterExit=no
