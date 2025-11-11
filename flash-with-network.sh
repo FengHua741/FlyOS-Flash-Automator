@@ -168,10 +168,10 @@ fi
 
 # HID烧录
 send_status_with_retry "hid_flash" "running" "开始执行HID烧录"
-send_status_with_retry "hid_flash" "running" "开始执行: fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin"
+send_status_with_retry "hid_flash" "running" "开始执行: fly-flash -d auto -h -f /data/klipper/out/klipper.bin"
 
 echo "执行HID烧录命令..." | tee -a $LOG_FILE
-if fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin; then
+if fly-flash -d auto -h -f /data/klipper/out/klipper.bin; then
     send_status_with_retry "hid_flash" "success" "HID烧录成功完成"
 else
     send_status_with_retry "hid_flash" "error" "HID烧录失败"

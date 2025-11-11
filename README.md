@@ -43,7 +43,7 @@ chmod +x install.sh
 **烧录流程**:
 ```bash
 fly-flash -d auto -u -f /usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin && \
-fly-flash -d auto -h -f /usr/lib/firmware/klipper/stm32h723-128k-usb.bin && \
+fly-flash -d auto -h -f /data/klipper/out/klipper.bin && \
 lsusb && \
 poweroff
 ```
@@ -137,7 +137,7 @@ tail -f /data/FlyOS-Flash-Automator/flash.log
 1. **固件文件是否存在**:
    ```bash
    ls -la /usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin
-   ls -la /usr/lib/firmware/klipper/stm32h723-128k-usb.bin
+   ls -la /data/klipper/out/klipper.bin
    ```
 
 2. **fly-flash 工具是否可用**:

@@ -40,8 +40,8 @@ if [ ! -f "/usr/lib/firmware/bootloader/hid_bootloader_h723_v1.0.bin" ]; then
     exit 1
 fi
 
-if [ ! -f "/usr/lib/firmware/klipper/stm32h723-128k-usb.bin" ]; then
-    echo "错误: Klipper 固件不存在: /usr/lib/firmware/klipper/stm32h723-128k-usb.bin"
+if [ ! -f "/data/klipper/out/klipper.bin" ]; then
+    echo "错误: Klipper 固件不存在: /data/klipper/out/klipper.bin"
     exit 1
 fi
 
